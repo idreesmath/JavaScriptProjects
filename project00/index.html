@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Scientific Calculator</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Scientific Calculator</h2>
+
+        <div class="row-div">
+            <input id="result" type="text">
+        </div>
+
+        <div class="row-div">
+            <div class="btn" onclick="getNumber('Math.exp(')">EXP</div>
+            <div class="btn" onclick="getNumber('Math.log(')">log</div>
+            <div class="btn" onclick="getNumber('Math.ln(')">ln</div>
+            <div class="btn" onclick="getNumber('**')">x<sup>y</sup></div>
+        </div>
+
+
+        <div class="row-div">
+            <div class="btn" onclick="getNumber('Math.sin(')">sin</div>
+            <div class="btn" onclick="getNumber('Math.cos(')">cos</div>
+            <div class="btn" onclick="getNumber('Math.tan(')">tan</div>
+            <div class="btn" onclick="getNumber('Math.sqrt(')">&radic;</div>
+        </div>
+
+
+        <div class="row-div">
+            <div class="btn" onclick="piFunction()">&pi;</div>
+            <div class="btn" onclick="expFunction()">e</div>
+            <div class="btn" onclick="getNumber('Math.abs(')">ABS</div>
+            <div class="btn" onclick="getNumber('*0.01')">%</div>
+        </div>
+
+
+        <div class="row-div">
+            <div class="btn" onclick="getNumber('(')">(</div>
+            <div class="btn" onclick="getNumber(')')">)</div>
+            <div class="btn" onclick="getNumber('**2')">x<sup>2</sup></div>
+            <div class="btn" onclick="clearResult()">c</div>
+        </div>
+
+
+        <div class="row-div">
+            <div class="btn numColor" onclick="getNumber('7')">7</div>
+            <div class="btn numColor" onclick="getNumber('8')">8</div>
+            <div class="btn numColor" onclick="getNumber('9')">9</div>
+            <div class="btn" onclick="getNumber('/')">/</div>
+        </div>
+
+
+        <div class="row-div">
+            <div class="btn numColor" onclick="getNumber('4')">4</div>
+            <div class="btn numColor" onclick="getNumber('5')">5</div>
+            <div class="btn numColor" onclick="getNumber('6')">6</div>
+            <div class="btn" onclick="getNumber('*')">x</div>
+        </div>
+
+
+        <div class="row-div">
+            <div class="btn numColor" onclick="getNumber('1')">1</div>
+            <div class="btn numColor" onclick="getNumber('2')">2</div>
+            <div class="btn numColor" onclick="getNumber('3')">3</div>
+            <div class="btn" onclick="getNumber('-')">-</div>
+        </div>
+
+
+        <div class="row-div">
+            <div class="btn numColor" onclick="getNumber('0')">0</div>
+            <div class="btn numColor" onclick="getNumber('.')">.</div>
+            <div class="btn resultEqual" onclick="getResult()">=</div>
+            <div class="btn" onclick="getNumber('+')">+</div>
+        </div>
+
+        <a href="../index.html">
+            <button class="home">Home</button> 
+        </a>
+    </div>
+    
+
+</body>
+<script src="app.js"></script>
+</html>
