@@ -30,28 +30,33 @@ function isValidEmail(email) {
 }
 
 
-//Function to check if required fields have data
-function checkRequired(inputArray) {
-    inputArray.forEach(function(input) {
-        if(input.value === ""){
-            showError(input, `${getFieldId(input)} is required`);
-        } else {
-            showSuccess(input);
-        }
-    });
-}
-
-
-// Function to get the id of the input field with proper case
-function getFieldId(input) {
-    return input.id.charAt(0).toUpperCase() + input.id.slice(1);
-}
-
-
-
 // This is an Event Listener for a form submit
 form.addEventListener("submit", function(e){
     e.preventDefault();
+    
+    if(username.value === "") {
+        showError(username,"Username is Required");
+    } else {
+        showSuccess(username);
+    }
 
-    checkRequired([username, email, password, password2]);
+    if(email.value === "") {
+        showError(email,"Email is Required");
+    } else if (!(isValidEmail(email.value))) {
+        showError(email,"Email is invalid");
+    } else {
+        showSuccess(email);
+    }
+
+    if(password.value === "") {
+        showError(password,"Password is Required");
+    } else { 
+        showSuccess(password);
+    }
+
+    if(password2.value === "") {
+        showError(password2,"Password2 is Required");
+    } else { 
+        showSuccess(password2);
+    }
 })
